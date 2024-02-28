@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        header a:hover {
+            color: #ffcc00;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            max-width: 100px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar {
+            margin-right: 15px;
+            width: 650px;
+        }
+
+        .search-bar form {
+            display: flex;
+            width: 100%;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 5px;
+        }
+
+        .search-bar button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #555;
+        }
+
+        .user-info a {
+            margin-right: 15px;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .user-info a:hover {
+            color: #ffcc00;
+        }
+
+        .user-info a.cart-link {
+            position: relative;
+        }
+
+        .user-info a.cart-link::before {
+            content: '(0)';
+            position: absolute;
+            background-color: #f00;
+            color: #fff;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+            top: -8px;
+            right: -8px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        main {
+            padding: 20px 0;
+            margin-bottom: 50px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form label,
+        form input,
+        form textarea {
+            display: block;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        form input,
+        form textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        form button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="https://theme.hstatic.net/200000420363/1000988446/14/logo.png?v=2262" alt="Logo"></a>
+            </div>
+            <div class="user-info">
+                <div class="search-bar">
+                    <form action="#">
+                        <input type="text" placeholder="Nhập từ khóa cần tìm">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <a href="login.html">Đăng nhập</a> | <a href="cart.html"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="product-detail.html">Chi Tiết Sản Phẩm</a></li>
+                    <li><a href="about.html">Giới Thiệu</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <form>
+                <label for="name">Họ và Tên:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Số Điện Thoại:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="address">Địa Chỉ:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="customerCode">Mã Khách Hàng:</label>
+                <input type="text" id="customerCode" name="customerCode" required>
+
+                <label for="message">Nội dung:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Gửi</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Quốc Toản. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

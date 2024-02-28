@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            max-width: 100px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        .search-bar {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .search-bar form {
+            display: flex;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 8px;
+            width: 70%;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .search-bar button {
+            padding: 8px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .product-detail {
+            display: flex;
+            margin: 20px 0;
+        }
+
+        .product-image {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-info {
+            flex: 2;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="https://theme.hstatic.net/200000420363/1000988446/14/logo.png?v=2262" alt="Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li class="active"><a href="product-detail.html">Chi Tiết Sản Phẩm</a></li>
+                    <li><a href="about.html">Giới Thiệu</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <form action="#">
+                    <input type="text" placeholder="Nhập từ khóa cần tìm">
+                    <button type="submit">Tìm kiếm</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="product-detail">
+                <div class="product-image">
+                    <img src="https://laptopvang.com/wp-content/uploads/2022/03/dell-xps-9320-2022-13-platinum-2.jpg" alt="Ảnh sản phẩm">
+                </div>
+                <div class="product-info">
+                    <h2>Laptop Dell XPS 15 Plus</h2>
+                    <p>Giá: 30.990.000₫</p>
+                    <p>Mô tả chi tiết sản phẩm Laptop Dell XPS 15 Plus.</p>
+                    <p>
+                        Tình trạng: New, Fullbox<br>
+                        Màu: Sky<br>
+                        CPU: Intel 12th Gen Core i5-1230U (10 Core, 12 Thread, 8-E-core 3.3GHz, 2-P-core 4.4GHz, 12MB Cache)<br>
+                        RAM: 8GB LPDDR4x 4267MHz memory<br>
+                        Storage: 256GB SSD<br>
+                        Màn hình: 13" 3:2 3K (2880x1920) Touch; AR+AS, GorillaGlass7, hỗ trợ active pen, độ sáng 500-Nits<br>
+                        VGA: Intel Iris Xe Graphics<br>
+                        Trọng lượng: 736g (chưa kèm phím); 1.3Kg (Kèm phím)<br>
+                        Phụ Kiện: Kèm theo bàn phím cho XPS 13" 2022 2-in-1
+                    </p>
+                    <button type="button" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+
+            <!-- SP -->
+
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Quốc Toản. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function addToCart() {
+            alert('Sản phẩm đã được thêm vào giỏ hàng.');
+        }
+    </script>
+</body>
+</html>

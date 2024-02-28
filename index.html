@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website bán hàng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="https://theme.hstatic.net/200000420363/1000988446/14/logo.png?v=2262" alt="Logo"></a>
+            </div>
+            <div class="user-info">
+                <div class="search-bar">
+                    <form action="#">
+                        <input type="text" placeholder="Nhập từ khóa cần tìm">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <a href="login.html">Đăng nhập</a> | <a href="cart.html"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="product-detail.html">Chi Tiết Sản Phẩm</a></li>
+                    <li><a href="about.html">Giới Thiệu</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="banner">
+                <img src="https://lh3.googleusercontent.com/Y0ZGaNUFisnSMdYx7ADN9oCvRRbQ01fhguoe83ffmwzS75F4TG5jybjnq2DyS6UXch5iUSmvQSgQ-NQXCxdwXWTDgMm_b6I=w1920-rw" alt="Banner">
+            </div>
+            <div class="category-list">
+                <ul>
+                    <li><a href="#">Laptop</a></li>
+                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="#">Máy tính bộ</a></li>
+                    <li><a href="#">Màn hình máy tính</a></li>
+                    <li><a href="#">Linh kiện máy tính</a></li>
+                    <li><a href="#">Phụ kiện máy tính</a></li>
+                    <li><a href="#">Game & Stream</a></li>
+                    <li><a href="#">Thiết bị âm thanh</a></li>
+                    <li><a href="#">Thiết bị thông minh</a></li>
+                </ul>
+            </div>
+            <div class="product-list">
+                <h2>Sản phẩm nổi bật</h2>
+                <ul>
+                    <li>
+                        <div class="product-image">
+                            <a href="product-detail.html"><img src="https://laptopvang.com/wp-content/uploads/2022/03/dell-xps-9320-2022-13-platinum-2.jpg" alt="Sản phẩm 1"></a>
+                        </div>
+                        <div class="product-info">
+                            <h3><a href="product-detail.html">Laptop Dell XPS 15 Plus</a></h3>
+                            <p>Giá: 30.990.000₫</p>
+                            <button type="button" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="product-image">
+                            <a href="product-detail.html"><img src="https://laptopvang.com/wp-content/uploads/2022/03/dell-xps-9320-2022-13-platinum-2.jpg" alt="Sản phẩm 2"></a>
+                        </div>
+                        <div class="product-info">
+                            <h3><a href="product-detail.html">Laptop Dell XPS 15 Plus</a></h3>
+                            <p>Giá: 30.990.000₫</p>
+                            <button type="button" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                        </div>
+                    </li>
+                    <!-- Thêm sản phẩm mới -->
+                    <li>
+                        <div class="product-image">
+                            <a href="product-detail.html?id=2"><img src="https://laptopvang.com/wp-content/uploads/2022/03/dell-xps-9320-2022-13-platinum-2.jpg" alt="Sản phẩm 3"></a>
+                        </div>
+                        <div class="product-info">
+                            <h3><a href="product-detail.html?id=2">Laptop Dell XPS 15 Pro</a></h3>
+                            <p>Giá: 35.990.000₫</p>
+                            <button type="button" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Quốc Toản. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function addToCart() {
+            // Thực hiện logic để thêm sản phẩm vào giỏ hàng
+            alert('Sản phẩm đã được thêm vào giỏ hàng.');
+        }
+    </script>
+</body>
+</html>

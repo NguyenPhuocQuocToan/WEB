@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ẩn và Hiện Menu</title>
+<style>
+    #LienKet {
+        visibility: hidden;
+        background-color: magenta; /* Màu nền tím */
+        color: white; /* Màu chữ trắng */
+        padding: 10px;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+
+<h2 id="menuHeader">Các liên kết</h2>
+
+<div id="LienKet">
+    <table>
+        <tr>
+            <td><a href="http://www.vol.vnn.vn">http://www.vol.vnn.vn</a></td>
+        </tr>
+        <tr>
+            <td><a href="http://www.fateback.com">http://www.fateback.com</a></td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    var menuHeader = document.getElementById("menuHeader");
+    var lienKet = document.getElementById("LienKet");
+
+    // Hiện tầng khi di chuột vào tiêu đề
+    menuHeader.addEventListener("mouseover", function() {
+        lienKet.style.visibility = "visible";
+    });
+
+    // Ẩn tầng khi click vào một trong các liên kết
+    lienKet.addEventListener("click", function() {
+        lienKet.style.visibility = "hidden";
+    });
+</script>
+
+</body>
+</html>

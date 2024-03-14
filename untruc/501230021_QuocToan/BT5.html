@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tạo chuỗi mới từ chuỗi đã cho</title>
+<script>
+    function taoChuoiMoi(inputString) {
+        if (inputString.length < 3) {
+            return inputString.toUpperCase(); // Chuyển đổi tất cả các ký tự thành chữ hoa nếu độ dài chuỗi nhỏ hơn 3
+        } else {
+            var baDau = inputString.substring(0, 3).toLowerCase(); // Lấy 3 ký tự đầu tiên và chuyển thành chữ thường
+            var conLai = inputString.substring(3); // Lấy các ký tự còn lại
+            return baDau + conLai; // Trả về chuỗi mới
+        }
+    }
+
+    function chuoiInRaManHinh() {
+        var originalString = document.getElementById("originalString").value;
+        var newString = taoChuoiMoi(originalString);
+        document.getElementById("result").innerText = newString;
+    }
+</script>
+</head>
+<body>
+
+<h2>Nhập chuỗi và nhấn nút để tạo chuỗi mới</h2>
+
+<input type="text" id="originalString" placeholder="Nhập chuỗi...">
+<button onclick="chuoiInRaManHinh()">Tạo chuỗi mới</button>
+
+<div id="result"></div>
+
+</body>
+</html>

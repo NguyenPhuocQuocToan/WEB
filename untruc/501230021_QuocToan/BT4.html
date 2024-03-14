@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chuỗi mới từ chuỗi đã cho</title>
+<script>
+    function modifyString(str) {
+        if (str.length < 3) {
+            return "Độ dài chuỗi phải từ 3 trở lên.";
+        } else {
+            var bacuoi = str.substring(str.length - 3); // Lấy 3 ký tự cuối cùng
+            return bacuoi + str + bacuoi; // Thêm vào ở cả phía trước và phía sau
+        }
+    }
+
+    function chuoitrenmanhinh() {
+        var originalString = document.getElementById("originalString").value;
+        var modifiedString = modifyString(originalString);
+        document.getElementById("result").innerText = modifiedString;
+    }
+</script>
+</head>
+<body>
+
+<h2>Nhập chuỗi và nhấn nút để tạo chuỗi mới</h2>
+
+<input type="text" id="originalString" placeholder="Nhập chuỗi...">
+<button onclick="chuoitrenmanhinh()">Tạo chuỗi mới</button>
+
+<div id="result"></div>
+
+</body>
+</html>

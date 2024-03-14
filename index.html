@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website bán hàng</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="C:\Users\Admin\Desktop\Nguyễn Phước Quốc Toản_501230021_CD23CT1\CSS\style.css">
 </head>
 <body>
     <header>
@@ -19,7 +19,7 @@
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
                 </div>
-                <a href="login.html">Đăng nhập</a> | <a href="cart.html"></a>
+                <a href="cart.html">Giỏ hàng (0)</a> | <a href="login.html">Đăng nhập</a>
             </div>
             <nav>
                 <ul>
@@ -59,7 +59,7 @@
                         <div class="product-info">
                             <h3><a href="product-detail.html">Laptop Dell XPS 15 Plus</a></h3>
                             <p>Giá: 30.990.000₫</p>
-                            <button type="button" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                            <button type="button" onclick="addToCart('Laptop Dell XPS 15 Plus', 30990000)">Thêm vào giỏ hàng</button>
                         </div>
                     </li>
                     <li>
@@ -69,10 +69,10 @@
                         <div class="product-info">
                             <h3><a href="product-detail.html">Laptop Dell XPS 15 Plus</a></h3>
                             <p>Giá: 30.990.000₫</p>
-                            <button type="button" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                            <button type="button" onclick="addToCart('Laptop Dell XPS 15 Plus', 30990000)">Thêm vào giỏ hàng</button>
                         </div>
                     </li>
-                    <!-- Thêm sản phẩm mới -->
+                    
                     <li>
                         <div class="product-image">
                             <a href="product-detail.html?id=2"><img src="https://laptopvang.com/wp-content/uploads/2022/03/dell-xps-9320-2022-13-platinum-2.jpg" alt="Sản phẩm 3"></a>
@@ -80,10 +80,20 @@
                         <div class="product-info">
                             <h3><a href="product-detail.html?id=2">Laptop Dell XPS 15 Pro</a></h3>
                             <p>Giá: 35.990.000₫</p>
-                            <button type="button" onclick="addToCart()">Thêm vào giỏ hàng</button>
+                            <button type="button" onclick="addToCart('Laptop Dell XPS 15 Pro', 35990000)">Thêm vào giỏ hàng</button>
                         </div>
                     </li>
                 </ul>
+            </div>
+            <div class="cart">
+                <h2>Giỏ hàng</h2>
+                <div class="cart-items">
+                    <p>Giỏ hàng của bạn đang trống.</p>
+                </div>
+                <div class="cart-total">
+                    <h3>Tổng tiền: <span id="total-price">0₫</span></h3>
+                    <button type="button" onclick="checkout()">Thanh toán</button>
+                </div>
             </div>
         </div>
     </main>
@@ -92,9 +102,65 @@
     </footer>
 
     <script>
-        function addToCart() {
-            // Thực hiện logic để thêm sản phẩm vào giỏ hàng
-            alert('Sản phẩm đã được thêm vào giỏ hàng.');
+        let cart = []; // Khởi tạo giỏ hàng
+
+        function addToCart(productName, productPrice) {
+            // Thêm sản phẩm vào giỏ hàng
+            cart.push({ name: productName, price: productPrice });
+            updateCart();
+            alert(`Sản phẩm ${productName} đã được thêm vào giỏ hàng.`);
+        }
+
+        function removeFromCart(index) {
+            // Xóa sản phẩm khỏi giỏ hàng
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function editCartItem(index) {
+            let currentItem = cart[index];
+            let newName = prompt("Nhập tên mới cho sản phẩm:", currentItem.name);
+            let newPrice = prompt("Nhập giá mới cho sản phẩm:", currentItem.price);
+
+            if (newName !== null && newPrice !== null && !isNaN(parseFloat(newPrice))) {
+                currentItem.name = newName;
+                currentItem.price = parseFloat(newPrice);
+                updateCart();
+                alert("Thông tin sản phẩm đã được chỉnh sửa thành công.");
+            } else {
+                alert("Bạn đã hủy hoặc nhập thông tin không hợp lệ. Thông tin sản phẩm không được sửa đổi.");
+            }
+        }
+
+        function updateCart() {
+            // Cập nhật thông tin giỏ hàng
+            const cartItemsElement = document.querySelector('.cart-items');
+            const cartTotalElement = document.getElementById('total-price');
+            let cartItemsHTML = '';
+            let totalPrice = 0;
+
+            if (cart.length === 0) {
+                cartItemsHTML = '<p>Giỏ hàng của bạn đang trống.</p>';
+            } else {
+                cart.forEach((item, index) => {
+                    cartItemsHTML += `
+                        <div>
+                            <p>${item.name}: ${item.price.toLocaleString()}₫</p>
+                            <button type="button" onclick="removeFromCart(${index})">Xóa</button>
+                            <button type="button" onclick="editCartItem(${index})">Chỉnh sửa</button>
+                        </div>
+                    `;
+                    totalPrice += item.price;
+                });
+            }
+
+            cartItemsElement.innerHTML = cartItemsHTML;
+            cartTotalElement.textContent = totalPrice.toLocaleString() + '₫';
+        }
+
+        function checkout() {
+            // Xử lý thanh toán
+            alert('Xin lỗi, tính năng thanh toán chưa được triển khai.');
         }
     </script>
 </body>

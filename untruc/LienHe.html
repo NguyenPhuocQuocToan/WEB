@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+    <link rel="stylesheet" href="CuoiKy.css">
+</head>
+<body>
+    <div class="header">
+        <img src="Images/banner.jpg" alt="" width="1200px" height="200px"> <br>
+        Babies with love
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Sản phẩm</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">Thú len</a></li>
+                        <li><a href="#"><Tr></Tr>Thú bông</a> </li>                                              
+                    </ul>              
+                </div>
+            </li>
+            <li> <a href="GioiThieu.html">Giới thiệu</a></li>
+            <li><a href="LienHe.html">Đăng Ký</a></li>
+        </ul>
+    </div >
+
+    <div class="Main">
+        <div class="MainLeft">
+            <h3>DANH MỤC SẢN PHẨM</h3>
+            <ul>
+                <li>
+                    <a  href="#">Thú len</a>
+                    <ul>
+                        <li><a href="ThoLen.html">Thỏ len</a></li>
+                        <li><a href="#">Thỏ len 1</a></li>
+                        <li><a href="#">Teddy len</a></li>
+                        <li><a href="#">Ếch len</a></li>
+                    </ul>
+                </li>
+                <hr>
+                <li>
+                    <a  href="#">Thú bông</a>
+                    <ul>
+                        <li><a href="#">Chó bông</a></li>
+                        <li><a href="#">Thỏ bông</a></li>
+                        <li><a href="#">Cừu bông</a></li>
+                        <li><a href="#">Gấu trúc </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="MainRight">
+            <img src="Images/banner2.jpg" alt="" width="1000px" height="200px"> <br>
+            <hr>
+            <font color="red" align="center">
+                
+                <h1>Đăng Ký</h1>
+            </font>
+            <form action="" align="center" onsubmit="return KiemTra()">
+            <table>
+                <th>Thông tin cá nhân</th>
+                <tr>
+                    <td>Tên:</td>
+                    <td><input type="text" id="ten"></td>
+                    <td>Họ: </td>
+                    <td><input type="text" id="ho"></td>
+                </tr> 
+                <tr>
+                    <td>Địa chỉ Email:</td>
+                    <td><input type="text" id="mail"></td>
+                    <td>Số điện thoại:</td>
+                    <td><input type="text" id="sdt"></td>
+                </tr>
+                <th>Địa chỉ thanh toán</th>
+                <tr>
+                    <td>Tên công ty (Tùy chọn):</td>
+                    <td><input type="text" id="cty"></td>
+                    <td>Địa chỉ:</td>
+                    <td><input type="text" id="dc1"></td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ 2:</td>
+                    <td><input type="text" id="dc2"></td>
+                    <td>Thành phố: </td>
+                    <td><input type="text" id="tp"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="Viet Nam"></td>
+                </tr>
+                <th>Bảo mật Tài khoản</th>
+                <tr>
+                    <td>Mật khẩu: </td>
+                    <td><input type="text" id="pass"></td>
+                    <td>Xác nhận mật khẩu:</td>
+                    <td><input type="text" id="xnp"></td>
+                </tr>
+            </table>
+            <br>          
+                <input type="submit" value="Đăng Ký"  >
+            </form>
+        </div>
+    </div>
+
+    <script src="KiemTra.js"></script>
+
+    <div class="footer">
+        <div class="M">
+            <a href="index.html">Trang chủ</a>
+            <a href="#">Sản phẩm</a>
+            <a href="GioiThieu.html">Giới thiệu</a>
+            <a href="LienHe.html">Liên hệ</a>
+        </div>
+        <p>Designed by Van Anh</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vertical Menu</title>
+<style>
+    /* CSS để tạo menu và thiết lập màu sắc */
+    #verticalMenu {
+        list-style-type: none;
+        padding: 0;
+        width: 200px;
+    }
+
+    #verticalMenu li {
+        background-color: #4CAF50; /* Màu nền xanh */
+        margin-bottom: 5px;
+    }
+
+    #verticalMenu li:hover {
+        background-color: red; /* Màu nền đỏ khi di chuột vào */
+    }
+
+    #verticalMenu li a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: yellow; /* Màu chữ vàng */
+    }
+</style>
+</head>
+<body>
+
+<ul id="verticalMenu">
+    <li><a href="https://e-chip.vn/">Giới thiệu</a></li>
+    <li><a href="http://www.manguon.com">Tin tức</a></li>
+    <li><a href="http://www.w3schools.com">Sản phẩm</a></li>
+    <li><a href="http://www.quantrimang.com">Trợ giúp</a></li>
+</ul>
+
+<script>
+    // JavaScript để click vào menu
+    var menuItems = document.querySelectorAll("#verticalMenu li");
+
+    menuItems.forEach(function(item) {
+        item.addEventListener("click", function() {
+            // Lấy href của thẻ a trong mục menu được click
+            var href = item.querySelector("a").getAttribute("href");
+            // Mở trang tương ứng với href trong một tab mới
+            window.open(href, "_blank");
+        });
+    });
+</script>
+
+</body>
+</html>
